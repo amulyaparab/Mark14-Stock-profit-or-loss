@@ -42,6 +42,7 @@ input {
   background-color: var(--secondary-color);
   color: white;
   font-size: large;
+  cursor: pointer;
 }
 
 #output {
