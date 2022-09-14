@@ -7,7 +7,7 @@ var outputEl = document.querySelector("#output");
 function calculateProfitOrLoss(initial, quantity, current) {
   if (initial > current) {
     var loss = (initial - current) * quantity;
-    var lossPercentage = (loss / initial) * 100;
+    var lossPercentage = (loss / (initial * quantity)) * 100;
     showOutput(
       "Hey your loss is " +
         loss +
@@ -17,7 +17,7 @@ function calculateProfitOrLoss(initial, quantity, current) {
     );
   } else if (current > initial) {
     var profit = (current - initial) * quantity;
-    var profitPercentage = (profit / initial) * 100;
+    var profitPercentage = (profit / (initial * quantity)) * 100;
     showOutput(
       "Hey your profit is " +
         profit +
