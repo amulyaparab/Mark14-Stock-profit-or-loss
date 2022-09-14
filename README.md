@@ -7,5 +7,6 @@ Description: This app was created using HTML, CSS and vanillaJS.
 * Input the initial price, quantity of stocks and the current price.
 * Clicking on the 'Tell me!' button will let you know the following.
 * Whether you are in profit, loss or if there is nor profit or loss.
+* The amount of profit/loss.
 * The percentage of that profit/loss.
 
