@@ -9,21 +9,20 @@ function calculateProfitOrLoss(initial, quantity, current) {
     var loss = (initial - current) * quantity;
     var lossPercentage = (loss / (initial * quantity)) * 100;
     showOutput(
-      "Hey your loss is " +
-        loss +
+      "Your loss is " +
+        loss.toFixed(2) +
         " and the percent is " +
-        lossPercentage +
+        lossPercentage.toFixed(2) +
         " % 🤕"
     );
   } else if (current > initial) {
     var profit = (current - initial) * quantity;
-    profit.toFixed(2);
     var profitPercentage = (profit / (initial * quantity)) * 100;
     showOutput(
-      "Hey your profit is " +
-        profit +
+      "Your profit is " +
+        profit.toFixed(2) +
         " and the percent is " +
-        profitPercentage +
+        profitPercentage.toFixed(2) +
         " % 💸"
     );
   } else {
