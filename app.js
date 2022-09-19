@@ -17,6 +17,7 @@ function calculateProfitOrLoss(initial, quantity, current) {
     );
   } else if (current > initial) {
     var profit = (current - initial) * quantity;
+    profit.toFixed(2);
     var profitPercentage = (profit / (initial * quantity)) * 100;
     showOutput(
       "Hey your profit is " +
@@ -35,6 +36,16 @@ function submitHandler(ip, qty, curr) {
   var qty = Number(quantityStocks.value);
   var curr = Number(currentPrice.value);
   calculateProfitOrLoss(ip, qty, curr);
+
+  if (ip <= 0) {
+    showOutput("Enter Valid Data❌");
+  }
+  if (qty <= 0) {
+    showOutput("Enter Valid Data❌");
+  }
+  if (curr <= 0) {
+    showOutput("Enter Valid Data❌");
+  }
 }
 
 function showOutput(message) {
