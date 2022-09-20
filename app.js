@@ -11,7 +11,7 @@ function calculateProfitOrLoss(initial, quantity, current) {
     showOutput(
       "Your loss is " +
         loss.toFixed(2) +
-        " and the percent is " +
+        " and the loss percentage is " +
         lossPercentage.toFixed(2) +
         " % 🤕"
     );
@@ -21,7 +21,7 @@ function calculateProfitOrLoss(initial, quantity, current) {
     showOutput(
       "Your profit is " +
         profit.toFixed(2) +
-        " and the percent is " +
+        " and the profit percentage is " +
         profitPercentage.toFixed(2) +
         " % 💸"
     );
@@ -36,13 +36,7 @@ function submitHandler(ip, qty, curr) {
   var curr = Number(currentPrice.value);
   calculateProfitOrLoss(ip, qty, curr);
 
-  if (ip <= 0) {
-    showOutput("Enter Valid Data❌");
-  }
-  if (qty <= 0) {
-    showOutput("Enter Valid Data❌");
-  }
-  if (curr <= 0) {
+  if (ip <= 0 || qty <= 0 || curr <= -1) {
     showOutput("Enter Valid Data❌");
   }
 }
